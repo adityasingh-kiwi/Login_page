@@ -16,8 +16,7 @@ function App() {
       
       
     </Routes>
-      <h1>hellooo Prashant</h1>
-      <h1>hellooo Bittu</h1>
+      
      
      </div>
 
