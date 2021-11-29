@@ -1,5 +1,7 @@
 .login_page{
     position: relative;
-    left: 30%;
+    
+    background-image: url("D:\project\login_page\src\image\login.jpg");
+    background-size: cover;
+    overflow-y: hidden;
 }
-

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import "./Header.css";
 
 
 
@@ -13,9 +14,16 @@ const Home = () => {
             <div>
                 <Header />
             </div>
-            <div>
-              <Sidebar />
+            <div style={{display:"flex",width:"100%"}} >
+                <div style={{width:"5%"}}>
+                <Sidebar />
+                </div>
+                <div className= "Background_image"style={{width:"95%"}}>
+                
+                </div>
+              
             </div>
+          
         </div>
     )
 }
