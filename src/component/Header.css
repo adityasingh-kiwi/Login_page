@@ -1,8 +1,14 @@
 .header {
     overflow: hidden;
-    background-color:#333;
-   
-    padding: 20px 10px;
+    background-color:#363945;
+      padding: 20px 10px;
+      
+  }
+
+  .Background_image{
+    background-image: url("D:\project\login_page\src\image\office.jpg");
+    background-size: cover;
+    overflow: hidden;
   }
   
   .header a {
@@ -29,8 +35,15 @@
   
 
   .header button.active {
-    background-color: dodgerblue;
-    color: white;
+    background-color: #2b3e50;
+    color:blue;
+    border-radius: 8px;
+    height: 50px;
+    width: 120px;
+  }
+  .header button.logout {
+    background-color: #003366;
+    color: red;
     border-radius: 8px;
     height: 50px;
     width: 120px;
@@ -40,7 +53,20 @@
 
   .header-right {
     float: right;
+
   }
+
+
+  
   
 
+ .profileImage{
+   width: 50px !important;
+   height: 50px !important;
+ }
  
+
+
+
+
+              

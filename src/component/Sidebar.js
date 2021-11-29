@@ -13,7 +13,7 @@ function Sidebar() {
         <div
         style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}
       >
-        <CDBSidebar textColor="#fff" backgroundColor="#333">
+        <CDBSidebar textColor="#fff" backgroundColor="black">
           <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
             <a
               href="/"
@@ -32,7 +32,7 @@ function Sidebar() {
                 padding: '20px 5px',
               }}
             >
-              Sidebar Footer
+              {/* Sidebar Footer */}
             </div>
           </CDBSidebarFooter>
         </CDBSidebar>
