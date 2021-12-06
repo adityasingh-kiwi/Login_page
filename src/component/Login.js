@@ -12,26 +12,29 @@ const Login = (props) => {
 
   })
 
-  const [errorData,setError] = useState(false)
+  const [errorData, setError] = useState(false)
 
   let Naviagte = useNavigate();
 
   const handleChange = (e) => {
     setError(false)
 
-    console.log("e------------->>>", e.target.value, e.target.name);
+
     setData({ ...data, [e.target.name]: e.target.value })
 
   }
 
 
-  // const history = useHistory();
+
 
   const handleLogin = async () => {
 
+    localStorage.setItem('data', data.userEmail)
+
 
     try {
-      console.log(props);
+
+
 
       const { userName, userEmail, userPassword } = data;
       setError(false)
@@ -56,7 +59,7 @@ const Login = (props) => {
         if (rest.status == 200) {
           Naviagte("/home");
 
-        }else{
+        } else {
           setError(true)
         }
 
@@ -72,11 +75,10 @@ const Login = (props) => {
 
 
   }
-  //vh-100 gradient-custom
   return (
     <div className="login_page">
-  
-       
+
+
 
       <section className="">
 
@@ -110,18 +112,12 @@ const Login = (props) => {
                     <button className="btn btn-outline-light btn-lg px-5" type="submit" onClick={handleLogin}>Login</button>
                     {errorData ? <p>Inavlid Login</p> : null}
 
-                    {/* <div className="d-flex justify-content-center text-center mt-4 pt-1">
-                      <a href="#!" className="text-white"><i className="fab fa-facebook-f fa-lg"></i></a>
-                      <a href="#!" className="text-white"><i className="fab fa-twitter fa-lg mx-4 px-2"></i></a>
-                      <a href="#!" className="text-white"><i className="fab fa-google fa-lg"></i></a>
-                    </div> */}
+
 
                   </div>
 
-                  {/* <div>
-                    <p className="mb-0">Don't have an account? <a href="#!" className="text-white-50 fw-bold">Sign Up</a></p>
-                  </div> */}
-                   
+
+
                 </div>
               </div>
             </div>

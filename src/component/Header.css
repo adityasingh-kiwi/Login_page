@@ -36,10 +36,10 @@
 
   .header button.active {
     background-color: #2b3e50;
-    color:blue;
-    border-radius: 8px;
-    height: 50px;
-    width: 120px;
+    color:rgb(0, 26, 255);
+    border-radius: 18px;
+    height: 70px;
+    width: 200px;
   }
   .header button.logout {
     background-color: #003366;

@@ -1,14 +1,15 @@
 import React, { useState, useEffect} from 'react'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './Header.css';
-//import db from "../Firebase";
+
 import { useNavigate } from "react-router-dom";
 import ModalOne from "./Modal"
+import RequestService from "./api";
 
 
 const Header = () => {
 
-    const [getdata, setGetdata] = useState("")
+    const [getdata, setGetdata] = useState({email:" ",id:" "})
 
 
     const [modalState, handleModalState] = useState(false);
@@ -18,22 +19,44 @@ const Header = () => {
 
     }
 
-    //   useEffect(() => {
-    //       db.child("loginpage").on("value", (snapshot) => {
-    //           if (snapshot.val() !== null) {
-    //               setGetdata(snapshot.val());
-    //           }
-    //          else {
-    //               setGetdata();
-    //           }
-    //       })
 
-    //  }, [])
+    const fetchAllRequest = async ()=>{
+        
+        let res = await RequestService.getOne()
+      
+         let userEmail = localStorage.getItem("data")
+         if(res.status == 200){
+            console.log("userEmail------------->>>",userEmail);
+          
+             for(let property in res["data"]){
+    
 
-     console.log("modalState===============>>",modalState);
+                if(res["data"][property]["userEmail"] == userEmail ){
+                    
+                   let update =  await RequestService.getOnlyOne(property);
+                   
+                    setGetdata(
+                        {
+                            ...getdata,
+                            email:res["data"][property]["userEmail"],
+                            id:property
+                    } 
+                    );
+                }
+              
+             }
+         }
+
+        
+    }
+     useEffect(() => {
+        fetchAllRequest();
+    }, [])
+
+     
 
     const handleOpenClose =(data)=>{
-        console.log("hhhhhhhhhhhh------------------>>",data)
+    
 
         if(!data){
             handleModalState(false);
@@ -45,6 +68,10 @@ const Header = () => {
         Naviagte("/");
 
     }
+
+
+
+
 
     return (
         
@@ -60,7 +87,8 @@ const Header = () => {
                         data-holder-rendered="true"/>
 
                 </div>
-                <button className="active" onClick={handleUserDetails}>User Profile</button>
+               
+                <button className="active" onClick={handleUserDetails}>{getdata.email}</button>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 <button className="logout" onClick={handleLogout}>Logout</button>
 
@@ -73,7 +101,7 @@ const Header = () => {
 
             
             {
-                <ModalOne  isopen={modalState} isOpenClose ={(data)=>handleOpenClose(data)}/>
+                <ModalOne  getdata={getdata}isopen={modalState} isOpenClose ={(data)=>handleOpenClose(data)}/>
             }
             <img className="mask-custom"></img>
 
