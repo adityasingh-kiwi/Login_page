@@ -8,6 +8,7 @@ import RequestService from "./api";
 import { getToken } from '@firebase/messaging';
 // import { getMessaging,getToken  } from "firebase/messaging";
 
+
 const ModalOne = ({ isopen, isOpenClose, getdata }) => {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [dataModal, setDatamodal] = useState({
