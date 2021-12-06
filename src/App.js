@@ -2,7 +2,7 @@ import Login from './component/Login';
 import './App.css';
 import Home from './component/Home';
 import { Routes, Route, Link } from "react-router-dom";
-
+// import firebase from './Firebase';
 
 
 function App() {
