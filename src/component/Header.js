@@ -43,6 +43,7 @@ const Header = () => {
                    let update =  await RequestService.getOnlyOne(property);
                    
                     setGetdata(
+                        
                         {
                             ...getdata,
                             email:res["data"][property]["userEmail"],

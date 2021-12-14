@@ -59,6 +59,7 @@ const quizStartHandler=()=>{
             
             
         </div>
+        
     )
 }
 export default Start;

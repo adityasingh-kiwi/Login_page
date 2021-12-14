@@ -31,4 +31,5 @@ const Survey = ({onQuizStart}) => {
     )
 }
 
+
 export default Survey

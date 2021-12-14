@@ -28,6 +28,7 @@ const ViewScore = () => {
  }
  useEffect(()=>{
      fetchAllAnswerRequest();
+     
 
  },[])
 

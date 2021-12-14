@@ -72,6 +72,7 @@ export default class RequestService extends Component{
        
     }
 
+    
     static delete(endPoint) {
         return axios.delete(`${this.baseApiUrl}${endPoint}`);
     }

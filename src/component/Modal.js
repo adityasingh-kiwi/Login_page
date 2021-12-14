@@ -114,6 +114,7 @@ const ModalOne = ({ isopen, isOpenClose, getdata }) => {
 
 
 
+
                     </form>
                 </div>
             </Modal>

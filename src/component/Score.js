@@ -9,6 +9,7 @@ const Score = () => {
 
      
       useEffect(()=>{
+          
 
             let getMarks = localStorage.getItem("Score");
             let getQuestion = localStorage.getItem("numberofQuestion");
