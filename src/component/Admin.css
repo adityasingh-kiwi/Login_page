@@ -1,0 +1,56 @@
+.button-add-question {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .button-view-score {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .background-admin{
+      position: relative;
+      /* top: 250px;
+      left:40%; */
+      padding: 200px 451px;
+      
+  }
+  .background-image{
+    background-image: url("/home/kiwitech/Desktop/Project/login_page/src/image/Survey.jpg");
+    height: 611px;
+    background-size: cover;
+  }
+
+   .addquestion-question{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  .addquestion-choices{
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  .addquestion-answer{
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }

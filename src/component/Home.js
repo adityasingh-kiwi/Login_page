@@ -17,6 +17,7 @@ const Home = () => {
             </div>
             <div style={{display:"flex",width:"100%"}} >
                 <div style={{width:"5%"}}>
+                
                 <Sidebar />
                 </div>
                 <div className= "Background_image"style={{width:"95%"}}>
@@ -26,6 +27,7 @@ const Home = () => {
             </div>
           
         </div>
+        
     )
 }
 

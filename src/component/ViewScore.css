@@ -1,0 +1,9 @@
+.view-score-table{
+    border:1px solid black;
+    width: 50%;
+}
+.view-text{
+    color:white;
+    background-color: #343a40;
+    text-align: center;
+}

@@ -1,7 +1,9 @@
 .login_page{
     position: relative;
     
-    background-image: url("D:\project\login_page\src\image\login.jpg");
+    background-image: url("/home/kiwitech/Desktop/Project/login_page/src/image/login.jpg");
     background-size: cover;
     overflow-y: hidden;
+
+    
 }

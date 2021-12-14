@@ -85,7 +85,7 @@ const ModalOne = ({ isopen, isOpenClose, getdata }) => {
 
 
 
-    console.log("isopenisopenisopenisopen---------------------------->>>", dataModal)
+    
     return (
         <>
 
@@ -110,6 +110,7 @@ const ModalOne = ({ isopen, isOpenClose, getdata }) => {
                         <div>
                             Upload photo: <input type="file" name="fileupload" accept="image/*" />
                         </div>
+
 
 
 
