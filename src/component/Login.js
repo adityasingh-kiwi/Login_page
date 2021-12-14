@@ -39,9 +39,6 @@ const Login = (props) => {
       const { userName, userEmail, userPassword } = data;
       setError(false)
 
-      if (userName == "" || userEmail == "" || userPassword == "") {
-        alert("Please Fill All Details");
-      } else {
         const rest = await fetch("https://login-page-9c380-default-rtdb.asia-southeast1.firebasedatabase.app/loginpage.json", {
           method: "POST",
           headers: {
@@ -63,7 +60,7 @@ const Login = (props) => {
           setError(true)
         }
 
-      }
+      
 
 
     } catch (error) {
@@ -93,17 +90,17 @@ const Login = (props) => {
                     <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
                     <p className="text-white-50 mb-5"> Enter Your Details</p>
 
-                    <div className="form-outline form-white mb-4">
+                    {/* <div className="form-outline form-white mb-4">
                       <input name="userName" type="text" id="typeEmailX" className="form-control form-control-lg" value={data.userName} onChange={handleChange} placeholder="username" required />
                       <label className="form-label" for="userName" >Name</label>
-                    </div>
+                    </div> */}
                     <div className="form-outline form-white mb-4">
-                      <input name="userEmail" type="email" id="typeEmailX" className="form-control form-control-lg" value={data.userEmail} onChange={handleChange} placeholder="email id" required />
+                      <input name="userEmail" type="email" id="typeEmailX" className="form-control form-control-lg" required value={data.userEmail} onChange={handleChange} placeholder="email id"  />
                       <label className="form-label" for="userEmail" >Email</label>
                     </div>
 
                     <div className="form-outline form-white mb-4">
-                      <input name="userPassword" type="password" id="typePasswordX" className="form-control form-control-lg" value={data.userPassword} onChange={handleChange} placeholder="password" required />
+                      <input name="userPassword" type="password" id="typePasswordX" className="form-control form-control-lg" required value={data.userPassword} onChange={handleChange} placeholder="password"  />
                       <label className="form-label" for="userPassword">Password</label>
                     </div>
 
@@ -130,4 +127,5 @@ const Login = (props) => {
 
 
 
+///checking gitt
 export default Login

@@ -6,7 +6,7 @@
   }
 
   .Background_image{
-    background-image: url("D:\project\login_page\src\image\office.jpg");
+    background-image: url("/home/kiwitech/Desktop/Project/login_page/src/image/Survey.jpg");
     background-size: cover;
     overflow: hidden;
   }
@@ -63,6 +63,12 @@
  .profileImage{
    width: 50px !important;
    height: 50px !important;
+ }
+
+ .text_colour{
+  color:white;
+  cursor: pointer;
+
  }
  
 

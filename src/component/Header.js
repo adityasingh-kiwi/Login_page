@@ -7,8 +7,6 @@ import ModalOne from "./Modal"
 import RequestService from "./api";
 
 
-
-
 const Header = () => {
 
     const [getdata, setGetdata] = useState({email:" ",id:" "})
@@ -20,6 +18,13 @@ const Header = () => {
         handleModalState(true);
 
     }
+    
+  let Naviagte = useNavigate();
+  
+
+  const handleAdmin=()=>{
+    Naviagte("/admin");
+  }
 
 
     const fetchAllRequest = async ()=>{
@@ -65,7 +70,7 @@ const Header = () => {
         }
         
     }
-    let Naviagte = useNavigate();
+    
     const handleLogout=()=>{
         Naviagte("/");
 
@@ -93,6 +98,10 @@ const Header = () => {
                 <button className="active" onClick={handleUserDetails}>{getdata.email}</button>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                 <button className="logout" onClick={handleLogout}>Logout</button>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+                {getdata.email==="admin@gmail.com" ?   <button className="logout"onClick={handleAdmin}>Admin</button> :null}
+               
 
                 <div className="background">
              
@@ -114,4 +123,4 @@ const Header = () => {
 
 
 
-export default Header;
+export default Header

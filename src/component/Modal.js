@@ -85,7 +85,7 @@ const ModalOne = ({ isopen, isOpenClose, getdata }) => {
 
 
 
-    console.log("isopenisopenisopenisopen---------------------------->>>", dataModal)
+    
     return (
         <>
 

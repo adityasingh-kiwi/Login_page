@@ -1,0 +1,64 @@
+{"data":[
+
+{
+    "question":"When is the economic survey generally tabled in the Parliament?",
+    "choices":[
+        "working day before the budget",
+        "working day after the budget",
+        "week before the budget",
+        "Anytime in the year"
+     
+    ],
+    "answer": "working day before the budget"
+},
+{
+    "question":"What is the real growth rate for FY21 as per the survey?",
+    "choices":[
+        "7.7% MoSPI",
+        "-7.7% MoSPI",
+        "11.5% MoSPI",
+        "None of the above"
+
+     
+    ],
+    "answer": "7.7% MoSPI"
+},
+{
+    "question":"India’s real GDP is projected to record how much growth in FY2021-2022??",
+    "choices":[
+        "11.0% per cent",
+        "-7.7% per cent",
+        "11.5% per cent",
+        "None of the above"
+
+     
+    ],
+    "answer": "11.0% per cent"
+},
+{
+    "question":"What was the theme of the economic survey this year?",
+    "choices":[
+        "COVID-19 warriors",
+        "COVID-17 warriors",
+        "Doctors and Health Workers",
+        "None"
+    ],
+    "answer": "COVID-19 warriors"
+},
+{
+    "question":"What kind of economic recovery is India having as per the Economic Survey 2020-21?",
+    "choices":[
+        "U shaped ",
+        "V shaped ",
+        "K shaped ",
+        "M shaped "
+
+     
+    ],
+    "answer": "V shaped"
+
+}
+
+
+]
+}
