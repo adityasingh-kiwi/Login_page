@@ -5,12 +5,13 @@ import firebase from "../firebase";
 import { Modal, Button } from 'antd';
 import './Modal.css';
 import RequestService from "./api";
-import { getToken } from '@firebase/messaging';
-// import { getMessaging,getToken  } from "firebase/messaging";
+//import { getToken } from '@firebase/messaging';
+import { getMessaging,getToken  } from "firebase/messaging";
+import { genericFalse,genericTrue } from './Const';
 
 
 const ModalOne = ({ isopen, isOpenClose, getdata }) => {
-    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [isModalVisible, setIsModalVisible] = useState(genericFalse);
     const [dataModal, setDatamodal] = useState({
         firstName: "",
         lastName: "",
@@ -18,33 +19,26 @@ const ModalOne = ({ isopen, isOpenClose, getdata }) => {
 
     })
 
-    // const loader = async () => {
-    //     console.log("getToken-------------->>",getToken);
-    //     await getToken().then((webPushTokenFCM) =>{
-    //         console.log("webpushhhh--------->>",webPushTokenFCM);
+    //  const loader = async () => {
+    //      console.log("getToken-------------->>",getToken);
+    //      await getToken().then((webPushTokenFCM) =>{
+    //          console.log("webpushhhh--------->>",webPushTokenFCM);
 
-    //     })
-    // }      
-    // useEffect(()=>{
+    //      })
+    //  }      
+     //useEffect(()=>{
 
-    //     loader();
+        // loader();
 
-    //     // const msg= firebase.messaging();
+    // const messaging= getMessaging();
 
-    //     //  msg.requestPermission().then(()=>{
-    //     //       return msg.getTokens()
-    //     //  }).then((data)=>{
-    //     //         console.log("token",data)
-    //     // })
-    // },[])
+    //  messaging.requestPermission().then(()=>{
+    //       return messaging.getToken()
+    //  }).then((data)=>{
+    //         console.log("token",data)
+    // })
+    //  },[])
 
-
-    // useEffect(() => {
-    //     let modifiedObject = { ...dataModal }
-    //     modifiedObject["userEmail"] = getdata.email;
-    //     setDatamodal(modifiedObject);
-
-    // }, [])
 
     const handleModalchange = (e) => {
 
@@ -53,7 +47,7 @@ const ModalOne = ({ isopen, isOpenClose, getdata }) => {
 
 
     const showModal = () => {
-        setIsModalVisible(true);
+        setIsModalVisible(genericTrue);
     };
 
     const handleOk = async () => {
@@ -75,12 +69,12 @@ const ModalOne = ({ isopen, isOpenClose, getdata }) => {
         } catch (error) {
 
         }
-        isOpenClose(false);
+        isOpenClose(genericFalse);
 
     };
 
     const handleCancel = () => {
-        isOpenClose(false);
+        isOpenClose(genericFalse);
     };
 
 

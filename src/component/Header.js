@@ -5,6 +5,7 @@ import './Header.css';
 import { useNavigate } from "react-router-dom";
 import ModalOne from "./Modal"
 import RequestService from "./api";
+import { genericFalse,genericTrue,genericAdminEmailid } from './Const';
 
 
 const Header = () => {
@@ -12,10 +13,10 @@ const Header = () => {
     const [getdata, setGetdata] = useState({email:" ",id:" "})
 
 
-    const [modalState, handleModalState] = useState(false);
+    const [modalState, handleModalState] = useState(genericFalse);
     const handleUserDetails = () => {
 
-        handleModalState(true);
+        handleModalState(genericTrue);
 
     }
     
@@ -67,7 +68,7 @@ const Header = () => {
     
 
         if(!data){
-            handleModalState(false);
+            handleModalState(genericFalse);
         }
         
     }
@@ -101,7 +102,7 @@ const Header = () => {
                 <button className="logout" onClick={handleLogout}>Logout</button>
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-                {getdata.email==="admin@gmail.com" ?   <button className="logout"onClick={handleAdmin}>Admin</button> :null}
+                {getdata.email=== genericAdminEmailid ?   <button className="logout"onClick={handleAdmin}>Admin</button> :null}
                
 
                 <div className="background">

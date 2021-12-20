@@ -3,10 +3,11 @@ import './Admin.css';
 import { useState } from 'react/cjs/react.development';
 import { Modal } from 'antd';
 import { v4 as uuidv4 } from 'uuid';
+import { genericFalse,genericTrue } from './Const';
 
 
 export const Addquestion = ( { isopen ,isOpenClose}) => {
-    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [isModalVisible, setIsModalVisible] = useState(genericFalse);
     const [dataQuestion,setDataQuestion]=useState({
         question:"",
         choices:[{
@@ -52,12 +53,12 @@ const handleReset =()=>{
 
     const handleCancel = () => {
         handleReset();
-        isOpenClose(false);
+        isOpenClose(genericFalse);
     };
 
 
     const handleOk = async () => {
-        isOpenClose(false);
+        isOpenClose(genericFalse);
 
        try {
         
@@ -151,6 +152,19 @@ const handleReset =()=>{
                                         <input type="text"  id ={element.id} name="choices" className="addquestion-choices" type="addquestion-choices" value={dataQuestion.choices[index].value} onChange={handleQuestionAnswer} placeholder="Write the Choices" required />
                                     )
                                 })}
+                                <div>
+                                    {dataQuestion.answers && dataQuestion.answers.map((element,index)=>{
+                                        return(
+                                            <input type="text" id={element.id} name="choices" className="addquestion-answer" type="addquestion-answer" value={dataQuestion.answers[index].value} onChange={handleAnswer} placeholder="Write the Answers" required />
+                                        )
+                                    })}
+                                
+                                </div>
+                                <div>
+                                
+                                <button onClick={handleaddAnswers }>Add Answers</button>
+                                
+                            </div>
                             
                             </div>
                         
