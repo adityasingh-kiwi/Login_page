@@ -1,23 +1,23 @@
 import React, { useEffect,useRef } from 'react'
 import { useState } from 'react';
 import './Survey.css';
-import RequestService from "./api";
 import { useNavigate } from "react-router-dom";
+import { genericFalse,genericTrue,genericValueZero,genericValueOne} from './Const';
 
  const Question = ({data , onAnswerUpdate , answers, numberOfQuestions , totalAnswer ,activeQuestion , onSetActiveQuestion , onSetStep}) => {
 
     const [selected,setSelected]=useState([]);
     const [error,setError]=useState('');
     const checkboxWrapper= useRef();
-    const [count,setCount]= useState(0);
-    const [countAnswer,setCountAnswer]=useState(0)
+    const [count,setCount]= useState(genericValueZero);
+    const [countAnswer,setCountAnswer]=useState(genericValueZero)
     const [userDetails,setUserDetails]=useState(" ");
     
 
     useEffect(()=>{
         const findCheckedInput=checkboxWrapper.current.querySelector('input:checked');
         if(findCheckedInput){
-            findCheckedInput.checked=false;
+            findCheckedInput.checked=genericFalse;
         }
 
     },[data]);
@@ -46,7 +46,7 @@ import { useNavigate } from "react-router-dom";
 
        
 
-        let countOne=0
+        let countOne=genericValueZero
         let hashMap={}
         totalAnswer.forEach(element => {
             hashMap[element.value] = element.id
@@ -54,7 +54,7 @@ import { useNavigate } from "react-router-dom";
 
         selected.forEach(data=>{
             if(hashMap[data]){
-               countOne = countOne + 1;
+               countOne = countOne + genericValueOne;
 
             }
         })
@@ -103,10 +103,10 @@ import { useNavigate } from "react-router-dom";
         }
         onAnswerUpdate(prevState => [...prevState,{q: data.question,a: selected}]);
         
-        setCount(count + 1)
-        if(activeQuestion < numberOfQuestions - 1){
+        setCount(count + genericValueOne)
+        if(activeQuestion < numberOfQuestions - genericValueOne){
             console.log("activeQuestion------->>",activeQuestion,numberOfQuestions);
-            onSetActiveQuestion(activeQuestion + 1);
+            onSetActiveQuestion(activeQuestion + genericValueOne);
 
         } else {
             onSetStep(3);
@@ -127,7 +127,7 @@ import { useNavigate } from "react-router-dom";
                     <h2 className="mb-5">{data.dataQuestion.question}</h2>
                     <div className="control" ref={checkboxWrapper}> 
                         {data.dataQuestion.choices.map((choice,i)=>(<label className="radio has background-light" keys={i}>
-                        {data.dataQuestion.answers.length > 1 ? <input type="checkbox" name="answer" value={choice.value} onChange={changeHandler}></input> :
+                        {data.dataQuestion.answers.length > genericValueOne ? <input type="checkbox" name="answer" value={choice.value} onChange={changeHandler}></input> :
                             <input type="radio" name="answer" value={choice.value} onChange={changeHandler}></input> }
                             {choice.value}
                         </label>

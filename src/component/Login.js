@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './Login.css';
 import { useNavigate } from "react-router-dom";
+import { genericFalse, genericTrue } from './Const';
 
 
 const Login = (props) => {
@@ -11,33 +12,48 @@ const Login = (props) => {
     userPassword: ""
 
   })
+  const [iserror,setIsError]=useState(genericFalse)
 
-  const [errorData, setError] = useState(false)
+  const [errorData, setError] = useState(genericFalse)
+  const [isLogin,setIsLogin]= useState(genericFalse)
 
   let Naviagte = useNavigate();
 
   const handleChange = (e) => {
-    setError(false)
+    setIsError(genericFalse)
+    
 
 
     setData({ ...data, [e.target.name]: e.target.value })
 
   }
 
+  
+  
 
 
 
-  const handleLogin = async () => {
+
+  const handleLogin = async (e) => {
+
+
+    e.preventDefault();
+    
+    
 
     localStorage.setItem('data', data.userEmail)
 
-
     try {
+      
 
 
-
-      const { userName, userEmail, userPassword } = data;
-      setError(false)
+      const { userName,userEmail, userPassword } = data;
+      if(userEmail==""||userPassword=="")
+      {
+        setIsError(genericTrue)
+        return genericFalse
+      }
+      setError(genericFalse)
 
         const rest = await fetch("https://login-page-9c380-default-rtdb.asia-southeast1.firebasedatabase.app/loginpage.json", {
           method: "POST",
@@ -57,7 +73,7 @@ const Login = (props) => {
           Naviagte("/home");
 
         } else {
-          setError(true)
+          setError(genericTrue)
         }
 
       
@@ -94,20 +110,24 @@ const Login = (props) => {
                       <input name="userName" type="text" id="typeEmailX" className="form-control form-control-lg" value={data.userName} onChange={handleChange} placeholder="username" required />
                       <label className="form-label" for="userName" >Name</label>
                     </div> */}
+                   
                     <div className="form-outline form-white mb-4">
                       <input name="userEmail" type="email" id="typeEmailX" className="form-control form-control-lg" required value={data.userEmail} onChange={handleChange} placeholder="email id"  />
                       <label className="form-label" for="userEmail" >Email</label>
+                      <p>{iserror.userEmail}</p>
                     </div>
-
+                   
                     <div className="form-outline form-white mb-4">
                       <input name="userPassword" type="password" id="typePasswordX" className="form-control form-control-lg" required value={data.userPassword} onChange={handleChange} placeholder="password"  />
                       <label className="form-label" for="userPassword">Password</label>
                     </div>
 
                     <p className="small mb-5 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p>
-
+                     {iserror ? <div className='error-msg'> 
+                       Please fill all the fields
+                     </div> :null}
                     <button className="btn btn-outline-light btn-lg px-5" type="submit" onClick={handleLogin}>Login</button>
-                    {errorData ? <p>Inavlid Login</p> : null}
+                    
 
 
 
@@ -126,5 +146,5 @@ const Login = (props) => {
 
 
 
-///checking gitt
+
 export default Login

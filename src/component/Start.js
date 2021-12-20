@@ -5,10 +5,11 @@ import Question from './Question';
 import './Survey.css';
 import Quest from './Quest.json';
 import RequestService from "./AddQuestionApi";
+import { genericValueOne, genericValueZero } from './Const';
 
  const Start = () => {
-const [step,setStep]= useState(1);
-const [activeQuestion,setActiveQuestion]=useState(0);
+const [step,setStep]= useState(genericValueOne);
+const [activeQuestion,setActiveQuestion]=useState(genericValueZero);
 const [answers,setAnswers]= useState([]);
 const [allData ,setAllData] = useState([])
 const [totalAnswer,setTotalAnswer]= useState([]);
@@ -45,7 +46,7 @@ const quizStartHandler=()=>{
 
     return (
         <div className="background-start">
-           {step===1 ? <Survey onQuizStart={quizStartHandler}/> :
+           {step===genericValueOne ? <Survey onQuizStart={quizStartHandler}/> :
             <Question   data={allData[activeQuestion]}
            onAnswerUpdate={setAnswers}
            numberOfQuestions={allData.length}

@@ -2,16 +2,17 @@ import React ,{useState} from 'react';
 import './Admin.css';
 import { Addquestion } from "./Addquestion";
 import { useNavigate } from "react-router-dom";
+import { genericFalse,genericTrue } from './Const';
 
 
 
  const Admin = () => {
 
-    const [isopen ,setisopen] = useState(false);
+    const [isopen ,setisopen] = useState(genericFalse);
 
 
     const handleOpenModal =()=>{
-        setisopen(true) 
+        setisopen(genericTrue) 
     }
 
     const isOpenClose =(data) =>{

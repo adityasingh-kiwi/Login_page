@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react/cjs/react.development';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './ViewScore.css'
 import RequestService from "./AddQuestionApi";
+import { genericValueOne } from './Const';
 const ViewScore = () => {
   const [allDetails,setAllDetails]=useState([])
 
@@ -52,7 +53,7 @@ const ViewScore = () => {
     {
       allDetails.map((data,index)=>(
         <tr>
-          <th scope="row">{index +1}</th>
+          <th scope="row">{index + genericValueOne}</th>
           <td>{data.userDetails}</td>
           <td>{data.count}</td>
 
