@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Score_page Snapshot_Score 1`] = `
+<Score>
+  <div>
+    <h1
+      className="score-thanku"
+    >
+      THANK YOU
+    </h1>
+    <div>
+      <h2
+        className="score-username"
+      >
+        Emaild id: 
+      </h2>
+    </div>
+    <div>
+      <h2
+        className="score-markstore"
+      >
+        Scored :
+        NaN
+        %
+      </h2>
+    </div>
+    <div
+      className="homePage"
+    >
+      <button
+        className="score-back-to-login"
+        defaultValue={false}
+        id="home"
+        onClick={[Function]}
+      >
+        Home page
+      </button>
+    </div>
+  </div>
+</Score>
+`;

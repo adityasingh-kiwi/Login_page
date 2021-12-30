@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addQuestion_page Snapshot_AddQuestion 1`] = `
+<div>
+  <Modal
+    confirmLoading={false}
+    okType="primary"
+    onCancel={[Function]}
+    onOk={[Function]}
+    title="ADD THE QUESTION,Choices AND ANSWERS"
+    visible={false}
+    width={520}
+  >
+    <div
+      className="form"
+    >
+      <form>
+        <div>
+          <div
+            className="addQuestion"
+          >
+            Question:
+            <input
+              className="addquestion-question"
+              defaultValue={true}
+              id="add_question"
+              name="question"
+              onChange={[Function]}
+              placeholder="Write Question"
+              required={true}
+              type="addquestion-question"
+              value=""
+            />
+          </div>
+          <div
+            className="addChoices_button"
+          >
+            <button
+              defaultValue={true}
+              id="addChoices"
+              onClick={[Function]}
+            >
+              Add Choices
+            </button>
+          </div>
+          <div
+            className="addChoices"
+          >
+            <input
+              className="addquestion-choices"
+              defaultValue={true}
+              id="choices"
+              name="choices"
+              onChange={[Function]}
+              placeholder="Write the Choices"
+              required={true}
+              type="addquestion-choices"
+              value=""
+            />
+            <div
+              className="addAnswer"
+            >
+              <input
+                className="addquestion-answer"
+                defaultValue={true}
+                id="answers"
+                name="choices"
+                onChange={[Function]}
+                placeholder="Write the Answers"
+                required={true}
+                type="addquestion-answer"
+                value=""
+              />
+            </div>
+            <div
+              className="addAnswer_button"
+            >
+              <button
+                defaultValue={true}
+                id="addAnswer"
+                onClick={[Function]}
+              >
+                Add Answers
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </Modal>
+</div>
+`;

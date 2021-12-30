@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Survey_page Snapshot_Survey 1`] = `
+<div
+  className="background-survey"
+>
+  <div
+    className="survey"
+  >
+    <div
+      className="card-survey"
+    >
+      <div
+        className="card-content"
+      >
+        <div
+          className="content"
+        >
+          <h1>
+            Start the Survey
+          </h1>
+          <p>
+            Best of Luck
+          </p>
+          <button
+            className="button is-info-is-medium"
+            onClick={[Function]}
+          >
+            Start
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
