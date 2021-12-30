@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal_test Snapshot_modal 1`] = `
+<ModalOne>
+  <Modal
+    confirmLoading={false}
+    okType="primary"
+    onCancel={[Function]}
+    onOk={[Function]}
+    title="Update the User Details"
+    visible={false}
+    width={520}
+  >
+    <Dialog
+      closeIcon={
+        <span
+          className="ant-modal-close-x"
+        >
+          <ForwardRef(CloseOutlined)
+            className="ant-modal-close-icon"
+          />
+        </span>
+      }
+      confirmLoading={false}
+      focusTriggerAfterClose={true}
+      footer={
+        <LocaleReceiver
+          componentName="Modal"
+          defaultLocale={
+            Object {
+              "cancelText": "Cancel",
+              "justOkText": "OK",
+              "okText": "OK",
+            }
+          }
+        >
+          [Function]
+        </LocaleReceiver>
+      }
+      maskTransitionName="ant-fade"
+      okType="primary"
+      onCancel={[Function]}
+      onClose={[Function]}
+      onOk={[Function]}
+      prefixCls="ant-modal"
+      title="Update the User Details"
+      transitionName="ant-zoom"
+      visible={false}
+      width={520}
+      wrapClassName=""
+    >
+      <PortalWrapper
+        visible={false}
+      />
+    </Dialog>
+  </Modal>
+</ModalOne>
+`;

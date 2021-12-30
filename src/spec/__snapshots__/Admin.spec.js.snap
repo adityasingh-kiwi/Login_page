@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Admin_page Snapshot_Admin 1`] = `
+<div
+  className="background-image"
+>
+  <div
+    className="background-admin"
+  >
+    <button
+      className="button-add-question"
+      defaultvalue={false}
+      id="add"
+      onClick={[Function]}
+    >
+       Add Question
+    </button>
+           
+    <button
+      className="button-view-score"
+      defaultValue={false}
+      id="view"
+      onClick={[Function]}
+    >
+      View Score
+    </button>
+  </div>
+  <Addquestion
+    isOpenClose={[Function]}
+    isopen={false}
+  />
+</div>
+`;

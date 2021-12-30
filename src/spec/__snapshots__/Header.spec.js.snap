@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header_page_test Snapshot_login 1`] = `
+<div
+  className="header"
+>
+  <a
+    className="logo"
+    href="#default"
+  >
+    Naviagtion
+  </a>
+  <div
+    className="header-right"
+    style={
+      Object {
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      className="col-md-4"
+    >
+      <img
+        alt="20x20"
+        className="rounded-circle z-depth-2 profileImage"
+        data-holder-rendered="true"
+        src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+      />
+    </div>
+    <button
+      className="active"
+      defaultValue={false}
+      onClick={[Function]}
+    >
+       
+    </button>
+               
+    <button
+      className="logout"
+      defaultValue={false}
+      onClick={[Function]}
+    >
+      Logout
+    </button>
+               
+    <div />
+    <div
+      className="background"
+    />
+    <ModalOne
+      getdata={
+        Object {
+          "email": " ",
+          "id": " ",
+        }
+      }
+      isOpenClose={[Function]}
+      isopen={false}
+    />
+    <img
+      className="mask-custom"
+    />
+  </div>
+</div>
+`;
